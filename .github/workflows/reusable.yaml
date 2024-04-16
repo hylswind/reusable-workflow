@@ -11,13 +11,11 @@ jobs:
   reusable_workflow_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4.0.0
+    - uses: actions/checkout@v4
+      with:
+        repository: hylswind/reusable-workflow@main
     - run: |
         ls -alh
         echo "From reusable workflow"
         echo ${{ inputs.name }}
         echo ${{ inputs.version }}
-        echo ${{ github.workflow }}
-        echo ${{ github.workflow_ref }}
-        echo ${{ github.workflow_sha }}
-        echo ${{ github.workspace }}
