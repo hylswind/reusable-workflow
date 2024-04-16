@@ -13,7 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        repository: hylswind/reusable-workflow@main
+        repository: hylswind/reusable-workflow
+        ref: main
     - run: |
         ls -alh
         echo "From reusable workflow"
