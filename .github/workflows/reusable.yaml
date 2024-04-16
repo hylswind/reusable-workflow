@@ -17,3 +17,7 @@ jobs:
         echo "From reusable workflow"
         echo ${{ inputs.name }}
         echo ${{ inputs.version }}
+        echo ${{ github.workflow }}
+        echo ${{ github.workflow_ref }}
+        echo ${{ github.workflow_sha }}
+        echo ${{ github.workspace }}
