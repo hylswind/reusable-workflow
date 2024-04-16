@@ -12,8 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        ref: "${{ github.head_ref || github.ref }}"
     - run: |
         ls -alh
         echo "From reusable workflow"
         echo ${{ inputs.name }}
         echo ${{ inputs.version }}
+        echo ${{ github.head_ref }}
+        echo ${{ github.ref }}
