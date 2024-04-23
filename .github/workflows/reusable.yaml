@@ -11,9 +11,12 @@ jobs:
   reusable_workflow_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4.0.0
+    # - uses: actions/checkout@v4.0.0
     - run: |
-        ls -alh
-        echo "From reusable workflow"
-        echo ${{ inputs.name }}
-        echo ${{ inputs.version }}
+        # ls -alh
+        # echo "From reusable workflow"
+        # echo ${{ inputs.name }}
+        # echo ${{ inputs.version }}
+        docker pull ubuntu:22.04
+        docker run -it ubuntu:22.04 --name test-container
+        docker exec -d test-container ls -alh
