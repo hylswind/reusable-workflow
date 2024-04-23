@@ -18,4 +18,4 @@ jobs:
         # echo ${{ inputs.name }}
         # echo ${{ inputs.version }}
         docker pull ubuntu:22.04
-        docker run -d --name test-container ubuntu:22.04 ls -alh
+        docker run -it  ubuntu:22.04 ls -alh
